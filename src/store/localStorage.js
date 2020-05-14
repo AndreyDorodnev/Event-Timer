@@ -1,10 +1,10 @@
-import {getNextYear,getPrevYear} from '../time';
+import {getCurrentTimeStr} from '../time';
 
 const initialSettings = {
     darkTheme: false,
     directCount: false,
-    stopTime: getNextYear(),
-    startTime: getPrevYear()
+    stopTime: getCurrentTimeStr(),
+    startTime: getCurrentTimeStr()
 }
 
 export const saveSettings = state => {

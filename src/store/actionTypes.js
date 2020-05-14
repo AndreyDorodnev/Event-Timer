@@ -1,0 +1,4 @@
+export const THEME_CHANGE = 'THEME_CHANGE';
+export const COUNT_CHANGE = 'COUNT_CHANGE';
+export const START_TIME_CHANGE = 'START_TIME_CHANGE';
+export const STOP_TIME_CHANGE = 'STOP_TIME_CHANGE';
