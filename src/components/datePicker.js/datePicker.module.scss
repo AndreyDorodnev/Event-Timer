@@ -1,0 +1,55 @@
+.datePicker{
+    display: block;
+    max-width: 320px;
+    margin-left: 20px;
+    margin-top: 20px;
+    width: fit-content;
+    .dateInput{
+        input{
+            height: 22px;
+            font-size: 18px;
+        }
+        .inputError{
+            border: 1px solid crimson;
+        }
+        p{
+            margin: 4px 0;
+            color: red;
+        }
+    }
+    label{
+        display: block;
+        font-size: 18px;
+        color: white;
+        margin-bottom: 4px;
+    }
+    .timer{
+        margin: 10px auto;
+        width: fit-content;
+        .hours,.minutes{
+            cursor: default;
+            display: inline-block;
+            box-sizing: border-box;
+            width: 30px;
+            height: 30px;
+            background-color: white;
+            margin: 0 10px;
+            text-align: center;
+            padding-top: 2px;
+            font-size: 18px;
+        }
+        span{
+            color: white;
+            font-size: 24px;
+        }
+    }
+    button{
+        cursor: pointer;
+        display: block;
+        width: 100%;
+        margin: 10px auto 0;
+        background-color: white;
+        height: 24px;
+
+    }
+}
