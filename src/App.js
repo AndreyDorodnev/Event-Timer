@@ -1,10 +1,9 @@
 import React from 'react';
 import Classes from './app.module.scss'; 
 import MenuButton from './components/menuBtn/MenuButton';
-import MenuClasses from './components/menu/menu.module.scss';
 import Menu from './components/menu/Menu';
 import MenuBg from './components/menu/MenuBg';
-
+import Clock from './components/clock/Clock';
 // import moment from 'moment';
 // import { getDaysLeft,getHoursLeft,getMinutesLeft,getSecondsLeft } from './time';
 // import {getDaysPassed,getHoursPassed,getMinutesPassed,getSecondsPassed} from './time';
@@ -20,7 +19,6 @@ class App extends React.Component {
     super(props);
     this.state = {
       isMenuActive: false,
-      menuClasses: [MenuClasses.menu],
     }
 
     this.onMenuBtnClick = this.onMenuBtnClick.bind(this);
@@ -38,17 +36,16 @@ class App extends React.Component {
 
   onMenuBtnClick() {
     const showMenu = !this.state.isMenuActive; //toggle menu flag
-    const arr = this.state.menuClasses;
-    showMenu ? arr.push(MenuClasses.menuActive) : arr.pop();
-    this.setState({isMenuActive: showMenu, menuClasses: arr});
+    this.setState({isMenuActive: showMenu});
   }
 
   render() {
     return (
       <div className={Classes.app}>
         <MenuButton  btnClick={this.onMenuBtnClick}></MenuButton>
-        <Menu classes={this.state.menuClasses} btnClick={this.onMenuBtnClick}></Menu>
+        <Menu active={this.state.isMenuActive} btnClick={this.onMenuBtnClick}></Menu>
         <MenuBg active={this.state.isMenuActive} bgClick={this.onMenuBtnClick}></MenuBg>
+        <Clock></Clock>
       </div>
     )
   }
