@@ -1,12 +1,13 @@
 .clock{
-    width: 80vw;
+    width: 60vw;
     margin: 0 auto;
-    padding-top: 300px;
+    padding-top: 10%;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     .divider{
         display: inline-block;
-        font-size: 200px;
+        font-size: 220px;
         color: var(--primaryFontColor);
     }
     .counter{
@@ -22,6 +23,9 @@
         span{
             font-size: 24px;
         }
+        &:first-child{
+            flex-basis: 100%;
+        }
     }
 }
 
@@ -29,11 +33,11 @@
     .clock{
         padding-top: 200px;
         .divider{
-            font-size: 120px;
+            font-size: 160px;
         }
         .counter{
             p{
-                font-size: 120px;
+                font-size: 160px;
             }
         }
     }
