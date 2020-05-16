@@ -1,7 +1,9 @@
 .clock{
+    position: relative;
     width: 60vw;
     margin: 0 auto;
-    padding-top: 10%;
+    top: 50%;
+    transform: translateY(-50%);
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -11,6 +13,7 @@
         color: var(--primaryFontColor);
     }
     .counter{
+        flex-basis: 28%;
         margin: 0;
         color: var(--primaryFontColor);
         text-align: center;
@@ -31,7 +34,7 @@
 
 @media(max-width:1400px){
     .clock{
-        padding-top: 200px;
+        width: 70vw;
         .divider{
             font-size: 160px;
         }
@@ -43,60 +46,43 @@
     }
 }
 
-@media(max-width:860px){
+@media(max-width:930px){
     .clock{
-        padding-top: 100px;
         .divider{
-            font-size: 80px;
+            font-size: 100px;
         }
         .counter{
             p{
-                font-size: 80px;
+                font-size: 100px;
             }
         }
     }
 }
-@media(max-width:540px){
+
+@media(max-width:580px){
     .clock{
-        max-width: 400px;
-        flex-wrap: wrap;
         .divider{
             font-size: 70px;
-            &:nth-child(2){
-                display: none;
-            }
         }
         .counter{
             p{
                 font-size: 70px;
             }
             span{
-                font-size: 20px;
-            }
-            &:first-child{
-                flex-basis: 100%;
-                margin-bottom: 10px;
-                p{
-                    font-size: 100px;
-                }
+                font-size: 18px;
             }
         }
     }
 }
-
-@media(max-width:370px){
+@media(max-width:420px){
     .clock{
+        width:calc(100% - 40px);
         .divider{
             font-size: 50px;
         }
         .counter{
             p{
                 font-size: 50px;
-            }
-            &:first-child{
-                p{
-                    font-size: 80px;
-                }
             }
         }
     }
