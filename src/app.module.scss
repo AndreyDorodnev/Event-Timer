@@ -1,7 +1,8 @@
 .app{
     position: relative;
     height: 100%;
-    // background-color: var(--primaryBackground);
+    max-height: 100%;
+    background-color: var(--primaryBackground);
     // box-sizing: border-box;
     // margin: 0;
 }
