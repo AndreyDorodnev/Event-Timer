@@ -8,7 +8,7 @@ import MenuButton from '../menuBtn/MenuButton';
 import ToggleButton from '../toggleBtn/ToggleButton';
 // import DateInput from '../elements/DateInput';
 
-import DatePicker from '../datePicker.js/DatePicker';
+import DatePicker from '../datePicker/DatePicker';
 
 function Menu(props) {
 
