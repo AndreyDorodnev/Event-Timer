@@ -1,4 +1,4 @@
-import {THEME_CHANGE,START_TIME_CHANGE,COUNT_CHANGE, STOP_TIME_CHANGE,SAVE_SETTINGS} from './actionTypes';
+import {THEME_CHANGE,START_TIME_CHANGE,COUNT_CHANGE, STOP_TIME_CHANGE} from './actionTypes';
 import {loadSettings,saveSettings} from './localStorage';
 
 const initialState = loadSettings();
