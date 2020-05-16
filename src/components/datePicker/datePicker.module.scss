@@ -67,9 +67,14 @@
             height: 40px;
             overflow: hidden;
             box-sizing: border-box;
+            transition: 0.3s;
+            border: 1px solid white;
             &:focus{
                 border: 1px solid lightblue;
                 color: cornflowerblue;
+            }
+            &:hover{
+                border: 1px solid gray;
             }
             svg{
                 display: block;
