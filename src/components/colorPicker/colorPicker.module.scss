@@ -3,11 +3,10 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    margin-top: 20px;
-    margin-left: 20px;
+    margin: 20px 0 20px 20px;
     width: 200px;
     .caption{
-        color: white;
+        color: var(--secondaryFontColor);
         margin-left: 10px;
     }
     .colorBtn{

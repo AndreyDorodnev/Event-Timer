@@ -1,20 +1,16 @@
 html {
   height: 100%;
-  --primaryBackground: #fff;
   --primaryButtonBackground: #03A9F4;
   --primaryButton: #fff;
   --secondaryButtonBackground: #039BE5;
   --primaryMenuBackground: #0277BD;
   --primaryFontColor: #000;
+  --secondaryFontColor: #fff;
   --clockColor: #000;
   --backgroundColor: #fff;
   --pickerColor: #000;
 }
-html[theme="dark"]{
-  --primaryBackground: #000;
-  --primaryButton: #fff;
-  --primaryFontColor: #fff;
-}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
