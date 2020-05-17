@@ -15,6 +15,7 @@ export default props => {
     }
     const colorChange = newColor => {
         setColor(newColor.hex);
+        setShowPicker(false);
         //save new color to state
         props.change(newColor.hex);
     }
