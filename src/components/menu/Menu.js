@@ -13,7 +13,7 @@ function Menu(props) {
   return (
       <div className={[Classes.menu,props.active? Classes.menuActive : ''].join(' ')}>
           <MenuButton btnClick={props.btnClick}></MenuButton>
-          <ToggleButton text='direct mode' active={props.directCount} buttonClick={props.countModeChange} ></ToggleButton>
+          <ToggleButton text='Direct mode' active={props.directCount} buttonClick={props.countModeChange} ></ToggleButton>
           <DatePicker caption="Start time" currentTime={props.startTime} setTime={props.setStartTime}></DatePicker>
           <DatePicker caption="Stop time" currentTime={props.stopTime} setTime={props.setStopTime}></DatePicker>
           <ColorPicker color={props.clockColor} change={props.clockColorChange} colorVar="--clockColor" caption="Clock color"></ColorPicker>
