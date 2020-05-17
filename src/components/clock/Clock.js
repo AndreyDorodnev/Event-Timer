@@ -46,7 +46,6 @@ function Clock(props) {
     return(
         <div className={Classes.clock}>
             <Counter value={days} label='Days'></Counter>
-            {/* <span className={Classes.divider}>:</span> */}
             <Counter value={hours} label='Hours'></Counter>
             <span className={Classes.divider}>:</span>
             <Counter value={minutes} label='Minutes'></Counter>

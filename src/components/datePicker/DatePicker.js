@@ -30,7 +30,6 @@ export default props => {
 
     const timeChange = newTime => {
         setTime(newTime);
-        // console.log(newTime);
     }
 
     return (
@@ -38,11 +37,6 @@ export default props => {
             <label>{`${props.caption} ${props.currentTime}`}</label>
             <DateInput dateChange={dateChange} validateError={validateError}></DateInput>
             <TimeSelector timeChange={timeChange}></TimeSelector>
-            {/* <div className={Classes.timer}>
-                <div className={Classes.hours}>{time.hours}</div>
-                <span>:</span>
-                <div className={Classes.minutes}>{time.minutes}</div>
-            </div> */}
             <button type="submit">save</button>
         </form>
     )
