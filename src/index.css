@@ -6,6 +6,9 @@ html {
   --secondaryButtonBackground: #039BE5;
   --primaryMenuBackground: #0277BD;
   --primaryFontColor: #000;
+  --clockColor: #000;
+  --backgroundColor: #fff;
+  --pickerColor: #000;
 }
 html[theme="dark"]{
   --primaryBackground: #000;

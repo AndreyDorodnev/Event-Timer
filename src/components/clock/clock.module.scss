@@ -10,12 +10,12 @@
     .divider{
         display: inline-block;
         font-size: 220px;
-        color: var(--primaryFontColor);
+        color: var(--clockColor);
     }
     .counter{
         flex-basis: 28%;
         margin: 0;
-        color: var(--primaryFontColor);
+        color: var(--clockColor);
         text-align: center;
         p{
             margin: 0;

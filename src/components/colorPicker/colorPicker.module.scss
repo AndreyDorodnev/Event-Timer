@@ -1,0 +1,29 @@
+.colorPicker{
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 20px;
+    margin-left: 20px;
+    width: 200px;
+    .caption{
+        color: white;
+        margin-left: 10px;
+    }
+    .colorBtn{
+        display: inline-block;
+        cursor: pointer;
+        width: 40px;
+        height: 20px;
+        box-sizing: border-box;
+        border: 3px solid white;
+        background-color: var(--pickerColor);
+
+    }
+    .picker{
+        position: absolute;
+        z-index: 2;
+        top: 30px;
+        left: 0;
+    }
+}

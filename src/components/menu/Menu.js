@@ -3,12 +3,10 @@ import {connect} from 'react-redux';
 import {getStartTime,getStopTime,isDarkTheme,isDirectCount} from '../../store/dataReducer';
 import {THEME_CHANGE,START_TIME_CHANGE,COUNT_CHANGE, STOP_TIME_CHANGE} from '../../store/actionTypes';
 import Classes from './menu.module.scss';
-// import Classes from './menu.module.scss';
 import MenuButton from '../menuBtn/MenuButton';
 import ToggleButton from '../toggleBtn/ToggleButton';
-// import DateInput from '../elements/DateInput';
-
 import DatePicker from '../datePicker/DatePicker';
+import ColorPicker from '../colorPicker/ColorPicker';
 
 function Menu(props) {
 
@@ -19,6 +17,8 @@ function Menu(props) {
           <ToggleButton text="dark theme" active={props.darkTheme} buttonClick={props.themeChange}></ToggleButton>
           <DatePicker caption="Start time" currentTime={props.startTime} setTime={props.setStartTime}></DatePicker>
           <DatePicker caption="Stop time" currentTime={props.stopTime} setTime={props.setStopTime}></DatePicker>
+          <ColorPicker colorVar="--clockColor" caption="Clock color"></ColorPicker>
+          <ColorPicker colorVar="--backgroundColor" caption="Background color"></ColorPicker>
       </div>
   )
 }
