@@ -4,7 +4,7 @@ import Classes from './colorPicker.module.scss';
 
 export default props => {
 
-    const [color,setColor] = useState(getComputedStyle(document.documentElement).getPropertyValue(props.colorVar));
+    const [color,setColor] = useState(props.color);
     const [showPicker,setShowPicker] = useState(false);
     const pickerRef = useRef(0);
 
@@ -13,14 +13,16 @@ export default props => {
     }
     const colorChange = newColor => {
         setColor(newColor.hex);
-        //set new color to given css variable
-        document.documentElement.style.setProperty(props.colorVar,newColor.hex);
+        //save new color to state
+        props.change(newColor.hex);
     }
 
     useEffect(()=>{
         //set current color to picker button
         pickerRef.current.style.setProperty('--pickerColor',color);
-    })
+        //set new color to given css variable
+        document.documentElement.style.setProperty(props.colorVar,color);
+    });
 
     return (
         <div className={Classes.colorPicker} ref={pickerRef}>

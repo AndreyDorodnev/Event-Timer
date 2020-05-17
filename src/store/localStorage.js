@@ -1,7 +1,8 @@
 import {getCurrentTimeStr} from '../time';
 
 const initialSettings = {
-    darkTheme: false,
+    clockColor: '#000',
+    bgColor: '#fff',
     directCount: false,
     stopTime: getCurrentTimeStr(),
     startTime: getCurrentTimeStr()

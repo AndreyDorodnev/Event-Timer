@@ -1,18 +1,10 @@
-import {THEME_CHANGE,START_TIME_CHANGE,COUNT_CHANGE, STOP_TIME_CHANGE} from './actionTypes';
+import {START_TIME_CHANGE,COUNT_CHANGE, STOP_TIME_CHANGE,CLOCK_COLOR_CHANGE,BG_COLOR_CHANGE} from './actionTypes';
 import {loadSettings,saveSettings} from './localStorage';
 
 const initialState = loadSettings();
 
 export default function dataReducer(state=initialState,action){
     switch(action.type){
-        case THEME_CHANGE: {
-            !state.darkTheme? document.documentElement.setAttribute('theme','dark'): document.documentElement.setAttribute('theme','light');
-            saveSettings({...state,darkTheme:!state.darkTheme});
-            return {
-                ...state,
-                darkTheme: !state.darkTheme
-            }
-        }
         case START_TIME_CHANGE: {
             saveSettings({...state,startTime:action.time});
             return {
@@ -34,6 +26,20 @@ export default function dataReducer(state=initialState,action){
                 directCount: !state.directCount
             }
         }
+        case CLOCK_COLOR_CHANGE: {
+            saveSettings({...state,clockColor:action.color});
+            return {
+                ...state,
+                clockColor: action.color
+            }
+        }
+        case BG_COLOR_CHANGE: {
+            saveSettings({...state,bgColor: action.color});
+            return {
+                ...state,
+                bgColor: action.color
+            }
+        }
         default:
             return state;
     }
@@ -41,5 +47,6 @@ export default function dataReducer(state=initialState,action){
 
 export const getStartTime = state => state.startTime;
 export const getStopTime = state => state.stopTime;
-export const isDarkTheme = state => state.darkTheme;
 export const isDirectCount = state => state.directCount; 
+export const getClockColor = state => state.clockColor;
+export const getBgColor = state => state.bgColor;
